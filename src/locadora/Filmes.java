@@ -15,6 +15,13 @@ public class Filmes {
     private String titulo;
     private String genero;
     private String categoria;
+    
+    public Filmes(String titulo, String genero, String categoria){
+        this.titulo=titulo;
+        this.genero=genero;
+        this.categoria=categoria;
+    
+    }
 
     public String getTitulo() {
         return titulo;

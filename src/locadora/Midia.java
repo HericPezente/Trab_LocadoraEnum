@@ -3,23 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package locadora;
 
 /**
  *
  * @author i03
  */
-public class Midia {
-    private String midia;//DVD,BLU,VHS
-    private double valor;
+public class  Midia {
 
-    public String getMidia() {
-        return midia;
+    private String tpMidia;//DVD,BLU,VHS
+    private double valor;
+    
+    public Midia(){
     }
 
-    public void setMidia(String midia) {
-        this.midia = midia;
+    public String getTpMidia() {
+        return tpMidia;
+    }
+
+    public void setTpMidia(String tpMidia) {
+        this.tpMidia = tpMidia;
     }
 
     public double getValor() {
@@ -31,4 +34,5 @@ public class Midia {
     }
     
     
+
 }

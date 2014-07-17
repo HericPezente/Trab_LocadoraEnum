@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package locadora;
 
 /**
@@ -11,9 +10,8 @@ package locadora;
  * @author i03
  */
 public class Cliente {
-    
+
     private String nome;
-    private String CPF;
 
     public String getNome() {
         return nome;
@@ -23,14 +21,4 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getCPF() {
-        return CPF;
-    }
-
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
-    
-    
-    
 }
