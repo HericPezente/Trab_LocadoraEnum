@@ -74,6 +74,8 @@ public class Locacao {
             System.out.println("---------------------------------------------------");
             System.out.println ("--- Cancelando o item da posição "+posicao+" da locação "+this.getNrLocacao()+" ---");
             System.out.println("---------------------------------------------------");
+            System.out.println("");
+            System.out.println("");
             itemArray[posicao] = null;
         }
     }

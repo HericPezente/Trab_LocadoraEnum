@@ -17,7 +17,13 @@ public class Programa {
 
     public void inicializa() {
 
-        
+        System.out.println("**** PROJETO LOCADORA ****");
+        System.out.println("Equipe:");
+        System.out.println("HERIC WALNIER PEZENTE");
+        System.out.println("BRUNO FREITAS");
+        System.out.println("JEFFERSON DOS PASSOS");
+        System.out.println("");
+        System.out.println("");
 
         Locacao[] vetLocacao = new Locacao[10];
 
