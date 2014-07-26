@@ -13,12 +13,14 @@ public class Item {
 
     
     private String numero_serie;
-    private Midia tipoMidia;
+    //private Midia tipoMidia;
     private Filmes filme;
     private double valor;
     private String entrega;
+    private EnumMidia enumMidia;
 
     
+    /*
     public Item(String numero_serie, Midia tipoMidia, Filmes filme){
         this.numero_serie=numero_serie;
         this.tipoMidia= tipoMidia;
@@ -26,6 +28,16 @@ public class Item {
         
         calculaAcrescimo();
     }
+    */
+    
+    public Item(String numero_serie, EnumMidia enumMidia, Filmes filme){
+        this.numero_serie=numero_serie;
+        this.enumMidia= enumMidia;
+        this.filme= filme;
+        
+        calculaAcrescimo();
+    }
+    
     //chama midia e acrescenta valor
     public String getNumero_serie() {
         return numero_serie;
@@ -35,13 +47,17 @@ public class Item {
         this.numero_serie = numero_serie;
     }
 
-    public Midia getTipoMidia() {
+    /*public Midia getTipoMidia() {
         return tipoMidia;
+    }*/
+    
+    public EnumMidia getEnumMidia(){
+        return enumMidia;
     }
 
-    public void setTipoMidia(Midia tipoMidia) {
+    /*public void setTipoMidia(Midia tipoMidia) {
         this.tipoMidia = tipoMidia;
-    }
+    }*/
 
     public double getValor() {
         return valor;
@@ -69,14 +85,17 @@ public class Item {
         double valor = 0;
         String entrega=null;
         if (filme.getCategoria().equals("Catalogo")) {
-            valor = tipoMidia.getValor();
+            //valor = tipoMidia.getValor();
+            valor=enumMidia.getValor();
             entrega=" 3 dias";
         } else if (filme.getCategoria().equals("Lancamento")) {
             
-            valor = tipoMidia.getValor() * 1.25;
+            //valor = tipoMidia.getValor() * 1.25;
+            valor=enumMidia.getValor() * 1.25;
             entrega=" 2 dias";
         } else if (filme.getCategoria().equals("Super Lancamento")) {
-            valor = tipoMidia.getValor() * 1.50;
+            //valor = tipoMidia.getValor() * 1.50;
+            valor=enumMidia.getValor() * 1.50;
             entrega=" 1 dia"; 
         }
 

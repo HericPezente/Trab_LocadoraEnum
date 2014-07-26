@@ -32,7 +32,7 @@ public class Programa {
         Filmes f3 = new Filmes("Planeta dos Macacos", "Ficcao", "Super Lancamento"); //BLU
         Filmes f4 = new Filmes("Gravidade", "Ficcao", "Super Lancamento");//DVD
 
-        Midia m1 = new Midia();
+        /*Midia m1 = new Midia();
         m1.setTpMidia("VHS");
         m1.setValor(2.50);
 
@@ -42,21 +42,31 @@ public class Programa {
 
         Midia m3 = new Midia();
         m3.setTpMidia("Blu");
-        m3.setValor(3.50);
+        m3.setValor(3.50);*/
 
         Cliente c1 = new Cliente();
         c1.setNome("ISAAC NEWTON");
         Cliente c2 = new Cliente();
         c2.setNome("BENJAMIN FRANKLIN");
 
-        Locacao l1 = new Locacao(1, c1);
+        /*Locacao l1 = new Locacao(1, c1);
         l1.insereItem("4444", f1, m1);
         l1.insereItem("5555", f3, m3);
 
         Locacao l2= new  Locacao(2,c2);
         l2.insereItem("7777", f2, m2);
         l2.insereItem("8888", f4, m2);
-        l2.insereItem("9999", f3, m3);
+        l2.insereItem("9999", f3, m3);*/
+        
+        Locacao l1= new Locacao(1,c1);
+        l1.insereItem("4444", f1,EnumMidia.VHS );
+        l1.insereItem("5555", f3, EnumMidia.BLU);
+
+        Locacao l2= new  Locacao(2,c2);
+        l2.insereItem("7777", f2, EnumMidia.DVD);
+        l2.insereItem("8888", f4, EnumMidia.DVD);
+        l2.insereItem("9999", f3, EnumMidia.BLU);
+        
 
         
         vetLocacao[0] = l1;

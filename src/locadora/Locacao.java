@@ -17,6 +17,7 @@ public class Locacao {
     private Item[] itemArray = new Item[10];
     private int posicao;
     private double vlrTotal;
+    
 
     public Locacao(int nrlocacao, Cliente cliente) {
         this.nrLocacao = nrlocacao;
@@ -52,14 +53,20 @@ public class Locacao {
         return vlrTotal;
     }
 
-    public void insereItem(String nrSerie, Filmes filme, Midia midia) {
+    /*public void insereItem(String nrSerie, Filmes filme, Midia midia) {
 
         Item item = new Item(nrSerie, midia, filme);
 
         gravaItem(item);
-    }
+    }*/
+    
+    public void insereItem(String nrSerie, Filmes filme, EnumMidia enumMidia) {
 
-    private void gravaItem(Item item) {
+        Item item = new Item(nrSerie, enumMidia, filme);
+
+        gravaItem(item);
+    }
+    private void gravaItem(Item item){
 
         itemArray[posicao] = item;
         posicao++;
